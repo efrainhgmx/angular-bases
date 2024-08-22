@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './hero.component.css'
 })
 export class HeroComponent {
-  public name: string = 'Iron Man';
+  public name: string = 'ironman';
   public age: number  = 45;
 
 
@@ -20,11 +20,16 @@ export class HeroComponent {
   }
 
   changeHero():void {
-    this.name = 'Spider Man';
+    this.name = 'spiderman';
   }
 
   changeAge():void {
     this.age = 19;
+  }
+
+  resetHero():void {
+    this.name = 'ironman';
+    this.age = 45;
   }
 
 }
