@@ -8,7 +8,13 @@
         let isEven  = even;
         let isOdd   = odd;
         "
-        class="list-group-item">
+        class="list-group-item"
+        [ngClass]="{ 
+            'list-group-item-primary': isFirst,
+            'list-group-item-danger': isLast,
+            'list-group-item-success': isEven,
+            'list-group-item-dark': isOdd,
+            }">
         <span class="text-primary">{{ i + 1 }} </span>
     <strong>Name: </strong><span>{{ character.name }}</span>-
     <strong>Power: </strong> <span>{{ character.power }}</span>
