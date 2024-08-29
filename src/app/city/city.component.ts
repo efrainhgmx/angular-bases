@@ -20,12 +20,13 @@ export class CityComponent implements OnInit {
   citiesObservable:City[] = [];
 
   ngOnInit():void {
+    //? PROMESA
     this.getCities.then((city:City) => {
       this.citiesPromise.push(city)
     })
     .catch(console.error)
 
-
+    //* OBSERVABLE
     this.getCitiesObservables
     .pipe(
       filter(city => city.name !== 'London'),
