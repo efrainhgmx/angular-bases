@@ -16,4 +16,8 @@ export class ListComponent {
     }
   ];
 
+  onDeleteCharacter(index: number):void {
+    console.log(index);
+  }
+
  }
