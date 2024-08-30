@@ -9,19 +9,14 @@ import { Character } from '../../interfaces/character.interface';
 export class ListComponent {
 
   @Input()
-  public characterList: Character[] = [
-    {
-      name: 'Trunks',
-      power: 10
-    }
-  ];
+  public characterList: Character[] = [];
 
   @Output()
-  onDeleteIndex: EventEmitter<number> = new EventEmitter();
+  onDeleteIndex: EventEmitter<string> = new EventEmitter();
 
   onDeleteCharacter(index: number):void {
-    console.log('Index List', index);
-    this.onDeleteIndex.emit(index);
+    const characterId: string = this.characterList[index].id || '';
+    this.onDeleteIndex.emit(characterId);
   }
 
  }
