@@ -36,7 +36,6 @@ export class DbzService {
     
       onNewCharacter(character: Character): void {
         const newCharacter: Character = { ...character, id: uuid()}
-        console.log(newCharacter)
         this.characters.push(newCharacter);
       }
     
@@ -46,7 +45,7 @@ export class DbzService {
 
       deleteCharacterById(id: string): void {
         if(!id) return;
-        
+
         this.characters = this.characters.filter( character => character.id !== id);
       }
 }
